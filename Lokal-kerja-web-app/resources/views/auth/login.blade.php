@@ -33,7 +33,7 @@
             </div>
             {{-- tombol masuk --}}
             <div class="flex flex-col justify-center items-center mt-8">
-                    <button type="submit" class="p-5 bg-primary text-white flex w-lg rounded-xl justify-center gap-2 items-center font-semibold hover:bg-purple-950 hover:gap-3 transition-all ease-in-out delay-200 ">Masuk <x-lucide-square-arrow-right-enter class="w-5 h-5 text-white"/></button>
+                    <button type="submit" class="p-5 bg-primary text-white flex w-lg rounded-xl justify-center gap-2 items-center font-semibold hover:bg-emerald-800 hover:gap-3 transition-all ease-in-out delay-200 ">Masuk <x-lucide-square-arrow-right-enter class="w-5 h-5 text-white"/></button>
                 <p class="mt-4 text-gray-500"><span>Belum punya akun?</span><a href="/register" class="font-bold text-primary"> Daftar</a></p>
             </div>
         </form>

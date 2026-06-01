@@ -15,7 +15,7 @@
                 <button 
                     onclick="switchRole('job_seeker')"
                     data-role-tab="job_seeker"
-                    class="flex-1 py-3 text-center text-indigo-900 border-b-2 border-indigo-900 font-semibold transition">
+                    class="flex-1 py-3 text-center text-primary border-b-2 border-primary font-semibold transition">
                     Pencari Kerja
                 </button>
                 <button 
@@ -42,7 +42,7 @@
                         name="name" 
                         placeholder="Masukkan nama lengkap Anda"
                         value="{{ old('name') }}"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 @error('name') border-red-500 @enderror"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary @error('name') border-red-500 @enderror"
                         required>
                     @error('name')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -57,7 +57,7 @@
                         name="email" 
                         placeholder="contoh@email.com"
                         value="{{ old('email') }}"
-                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 @error('email') border-red-500 @enderror"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary @error('email') border-red-500 @enderror"
                         required>
                     @error('email')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -72,7 +72,7 @@
                             type="password" 
                             name="password" 
                             placeholder="••••••••"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 @error('password') border-red-500 @enderror"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary @error('password') border-red-500 @enderror"
                             required>
                         @error('password')
                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -84,7 +84,7 @@
                             type="password" 
                             name="confirm_password" 
                             placeholder="••••••••"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 @error('confirm_password') border-red-500 @enderror"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary @error('confirm_password') border-red-500 @enderror"
                             required>
                         @error('confirm_password')
                             <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
@@ -99,10 +99,10 @@
                         id="agree_terms"
                         name="agree_terms" 
                         value="1"
-                        class="mt-1 rounded border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 @error('agree_terms') border-red-500 @enderror"
+                        class="mt-1 rounded border-gray-300 focus:border-primary focus:ring-primary @error('agree_terms') border-red-500 @enderror"
                         required>
                     <label for="agree_terms" class="text-gray-600 text-xs">
-                        Saya setuju dengan <a href="#" class="text-indigo-600 hover:underline">Syarat & Ketentuan</a> dan <a href="#" class="text-indigo-600 hover:underline">Kebijakan Privasi</a>
+                        Saya setuju dengan <a href="#" class="text-primary hover:underline">Syarat & Ketentuan</a> dan <a href="#" class="text-primary hover:underline">Kebijakan Privasi</a>
                     </label>
                 </div>
                 @error('agree_terms')
@@ -113,7 +113,7 @@
                 <!-- Submit Button -->
                 <button 
                     type="submit"
-                    class="w-full bg-indigo-900 text-white font-semibold py-3 rounded-md hover:bg-indigo-800 transition mt-6">
+                    class="w-full bg-primary text-white font-semibold py-3 rounded-md hover:bg-emerald-800 transition mt-6">
                     Daftar Sekarang
                 </button>
 
@@ -124,7 +124,7 @@
 
             <!-- Login Link -->
             <p class="text-center text-gray-600 text-sm mt-6">
-                Sudah punya akun? <a href="{{ route('auth.login') }}" class="text-indigo-600 hover:underline font-semibold">Login</a>
+                Sudah punya akun? <a href="{{ route('auth.login') }}" class="text-primary hover:underline font-semibold">Login</a>
             </p>
 
         </div>
@@ -139,9 +139,9 @@
             tabs.forEach(tab => {
                 if (tab.getAttribute('data-role-tab') === role) {
                     tab.classList.remove('text-gray-500', 'border-transparent');
-                    tab.classList.add('text-indigo-900', 'border-b-2', 'border-indigo-900', 'font-semibold');
+                    tab.classList.add('text-primary', 'border-b-2', 'border-primary', 'font-semibold');
                 } else {
-                    tab.classList.remove('text-indigo-900', 'border-b-2', 'border-indigo-900', 'font-semibold');
+                    tab.classList.remove('text-primary', 'border-b-2', 'border-primary', 'font-semibold');
                     tab.classList.add('text-gray-500', 'border-transparent');
                 }
             });
