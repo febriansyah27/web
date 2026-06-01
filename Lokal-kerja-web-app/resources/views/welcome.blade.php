@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --color-primary: #450000; }
+        :root { --color-primary: #13391e; }
         body { font-family: 'Inter', sans-serif; }
         .bg-primary { background-color: var(--color-primary); }
         .text-primary { color: var(--color-primary); }
@@ -39,10 +39,10 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(
-                to right,
-                rgba(249, 35, 213, 0.56) 0%,
-                rgba(225, 32, 109, 0.85) 50%,
-                rgba(188, 28, 87, 0.55) 100%
+                135deg,
+                rgba(6, 40, 35, 0.88) 0%,
+                rgba(13, 148, 136, 0.68) 50%,
+                rgba(20, 184, 166, 0.72) 100%
             );
             z-index: 1;
         }
@@ -253,7 +253,7 @@
     <!-- End CTA Banner -->
 
     <!-- Footer -->
-    <footer class="bg-slate-900 py-10 text-center">
+    <footer class="py-12 text-center border-t border-white/10 shadow-inner" style="background: linear-gradient(180deg, #07130d 0%, #0b1f15 55%, #050c08 100%);">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <a href="/" class="text-2xl font-extrabold text-white tracking-tight">LokalKerja</a>
             <p class="mt-3 text-sm text-slate-400">Platform pencarian kerja lokal terpercaya di Palu, Indonesia.</p>
