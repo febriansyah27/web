@@ -174,7 +174,7 @@
                         </div>
                         <form action="{{ route('profile.generate_cv') }}" method="POST">
                             @csrf
-                            <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
+                            <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800">
                                 <x-lucide-rocket class="h-4 w-4" /> Generate CV dengan AI
                             </button>
                         </form>

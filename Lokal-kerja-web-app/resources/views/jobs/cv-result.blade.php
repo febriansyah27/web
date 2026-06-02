@@ -10,10 +10,10 @@
                     <a href="{{ route('jobs.profile') }}" class="inline-flex items-center rounded-2xl bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm ring-1 ring-inset ring-slate-300 transition hover:bg-slate-50">
                         Kembali ke Profil
                     </a>
-                    <button onclick="copyCvText()" class="inline-flex items-center gap-2 rounded-2xl bg-slate-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800">
+                    <button onclick="copyCvText()" class="inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800">
                         <x-lucide-copy class="h-4 w-4" /> Copy Text
                     </button>
-                    <a href="{{ route('profile.download_cv_pdf') }}" class="inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-900">
+                    <a href="{{ route('profile.download_cv_pdf') }}" class="inline-flex items-center gap-2 rounded-2xl bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800">
                         <x-lucide-download class="h-4 w-4" /> Download PDF
                     </a>
                 </div>

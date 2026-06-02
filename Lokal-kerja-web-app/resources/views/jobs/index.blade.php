@@ -20,7 +20,7 @@
                 <!-- Submit Button -->
                 <button 
                     type="submit" 
-                    class="rounded-xl bg-[#13391e] px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-[#0f2d18] flex-shrink-0"
+                    class="rounded-xl bg-[#13391e] px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-emerald-800 flex-shrink-0"
                 >
                     Cari Pekerjaan
                 </button>
@@ -141,7 +141,7 @@
                         <div class="mt-6 flex gap-3">
                             <a 
                                 href="{{ route('jobs.show', $job->id) }}" 
-                                class="flex-1 rounded-xl bg-[#13391e] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#0f2d18] text-center"
+                                class="flex-1 rounded-xl bg-[#13391e] px-4 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800 text-center"
 
                             >
                                 Lihat Detail
