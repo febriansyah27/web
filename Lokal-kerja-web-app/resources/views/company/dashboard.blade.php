@@ -6,7 +6,7 @@
                 <h1 class="text-2xl font-bold text-slate-900">Halo, {{ auth()->user()->name }}</h1>
                 <p class="mt-1 text-sm text-slate-500">Kelola lowongan dan temukan talenta terbaik hari ini.</p>
             </div>
-            <a href="{{ route('company.jobs.create') }}" class="inline-flex items-center gap-2 rounded-xl bg-indigo-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-800 shadow-sm">
+            <a href="{{ route('company.jobs.create') }}" class="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-800 shadow-sm">
                 <x-lucide-plus-circle class="h-5 w-5" /> Posting Lowongan Baru
             </a>
         </div>
@@ -21,8 +21,8 @@
         <!-- Stats Cards -->
         <div class="mb-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div class="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50">
-                    <x-lucide-briefcase class="h-7 w-7 text-indigo-600" />
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50">
+                    <x-lucide-briefcase class="h-7 w-7 text-emerald-600" />
                 </div>
                 <div>
                     <p class="text-xs font-medium text-slate-500">Lowongan Aktif</p>
@@ -57,7 +57,7 @@
                 <h2 class="text-lg font-semibold text-slate-900">Lowongan Saya</h2>
                 <div class="mt-4 w-full md:mt-0 md:w-72 relative">
                     <x-lucide-search class="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-                    <input type="text" placeholder="Cari lowongan..." class="w-full rounded-xl border border-slate-200 bg-slate-50 py-2 pl-10 pr-4 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                    <input type="text" placeholder="Cari lowongan..." class="w-full rounded-xl border border-slate-200 bg-slate-50 py-2 pl-10 pr-4 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">
                 </div>
             </div>
 
@@ -100,7 +100,7 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="flex items-center gap-3">
-                                            <a href="{{ route('company.applicants.index', $job->id) }}" class="text-slate-400 hover:text-indigo-600 transition" title="Lihat Pelamar">
+                                            <a href="{{ route('company.applicants.index', $job->id) }}" class="text-slate-400 hover:text-emerald-600 transition" title="Lihat Pelamar">
                                                 <x-lucide-eye class="h-5 w-5" />
                                             </a>
                                             <a href="{{ route('company.jobs.edit', $job->id) }}" class="text-slate-400 hover:text-emerald-600 transition" title="Edit">

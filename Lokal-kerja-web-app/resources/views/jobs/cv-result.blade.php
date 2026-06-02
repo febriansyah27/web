@@ -19,9 +19,9 @@
                 </div>
             </div>
 
-            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div class="rounded-3xl border border-slate-200 bg-white p-4 shadow-xl sm:p-8">
                 {{-- Kita render markdown dari text balasan AI --}}
-                <div id="cvContent" class="prose prose-slate max-w-none">
+                <div id="cvContent" class="cv-paper">
                     {!! Illuminate\Support\Str::markdown($cvText) !!}
                 </div>
             </div>
@@ -30,6 +30,77 @@
             <textarea id="cvRawText" class="hidden">{{ $cvText }}</textarea>
         </div>
     </div>
+
+    <style>
+        .cv-paper {
+            max-width: 850px;
+            min-height: 1100px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            color: #1f2937;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        .cv-paper h1 {
+            color: #14532d;
+            font-size: 34px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 4px solid #14532d;
+            padding-bottom: 12px;
+            margin-bottom: 14px;
+        }
+
+        .cv-paper h2 {
+            color: #166534;
+            font-size: 18px;
+            font-weight: 800;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #bbf7d0;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .cv-paper h3 {
+            color: #111827;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 18px;
+            margin-bottom: 4px;
+        }
+
+        .cv-paper p {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .cv-paper ul {
+            margin-top: 8px;
+            margin-bottom: 14px;
+            padding-left: 22px;
+            list-style-type: disc;
+        }
+
+        .cv-paper li {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .cv-paper strong {
+            color: #111827;
+            font-weight: 700;
+        }
+
+        .cv-paper a {
+            color: #166534;
+            text-decoration: underline;
+        }
+    </style>
 
     <script>
         function copyCvText() {
