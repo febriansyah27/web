@@ -6,7 +6,7 @@
                 <h1 class="text-2xl font-bold text-slate-900">Halo, {{ auth()->user()->name }}</h1>
                 <p class="mt-1 text-sm text-slate-500">Kelola lowongan dan temukan talenta terbaik hari ini.</p>
             </div>
-            <a href="{{ route('company.jobs.create') }}" class="inline-flex items-center gap-2 rounded-xl bg-indigo-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-800 shadow-sm">
+            <a href="{{ route('company.jobs.create') }}" class="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-800 shadow-sm">
                 <x-lucide-plus-circle class="h-5 w-5" /> Posting Lowongan Baru
             </a>
         </div>
@@ -21,8 +21,8 @@
         <!-- Stats Cards -->
         <div class="mb-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <div class="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50">
-                    <x-lucide-briefcase class="h-7 w-7 text-indigo-600" />
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50">
+                    <x-lucide-briefcase class="h-7 w-7 text-emerald-600" />
                 </div>
                 <div>
                     <p class="text-xs font-medium text-slate-500">Lowongan Aktif</p>

@@ -1,7 +1,7 @@
 <x-company-layout title="Posting Lowongan Baru">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div class="mb-8">
-            <a href="{{ route('company.dashboard') }}" class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-indigo-600 transition">
+            <a href="{{ route('company.dashboard') }}" class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-emerald-800 transition">
                 <x-lucide-arrow-left class="h-4 w-4" /> Kembali ke Dashboard
             </a>
             <h1 class="text-2xl font-bold text-slate-900">Posting Lowongan Baru</h1>
@@ -15,20 +15,20 @@
                 <div class="space-y-4">
                     <label class="block text-sm font-medium text-slate-700">
                         Judul Lowongan <span class="text-rose-500">*</span>
-                        <input type="text" name="title" value="{{ old('title') }}" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="Contoh: Senior Frontend Developer">
+                        <input type="text" name="title" value="{{ old('title') }}" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" placeholder="Contoh: Senior Frontend Developer">
                         @error('title') <p class="mt-1 text-xs text-rose-500">{{ $message }}</p> @enderror
                     </label>
 
                     <div class="grid gap-4 md:grid-cols-2">
                         <label class="block text-sm font-medium text-slate-700">
                             Lokasi <span class="text-rose-500">*</span>
-                            <input type="text" name="location" value="{{ old('location') }}" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="Contoh: Jakarta Pusat, Remote">
+                            <input type="text" name="location" value="{{ old('location') }}" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" placeholder="Contoh: Jakarta Pusat, Remote">
                             @error('location') <p class="mt-1 text-xs text-rose-500">{{ $message }}</p> @enderror
                         </label>
                         
                         <label class="block text-sm font-medium text-slate-700">
                             Tipe Pekerjaan <span class="text-rose-500">*</span>
-                            <select name="type" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                            <select name="type" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">
                                 <option value="" disabled selected>Pilih tipe pekerjaan</option>
                                 <option value="Full-time" {{ old('type') == 'Full-time' ? 'selected' : '' }}>Full-time</option>
                                 <option value="Part-time" {{ old('type') == 'Part-time' ? 'selected' : '' }}>Part-time</option>
@@ -42,19 +42,19 @@
                     <div class="grid gap-4 md:grid-cols-3">
                         <label class="block text-sm font-medium text-slate-700">
                             Kisaran Gaji (Opsional)
-                            <input type="text" name="salary" value="{{ old('salary') }}" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="Contoh: Rp 8.000.000 - Rp 12.000.000">
+                            <input type="text" name="salary" value="{{ old('salary') }}" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" placeholder="Contoh: Rp 8.000.000 - Rp 12.000.000">
                             @error('salary') <p class="mt-1 text-xs text-rose-500">{{ $message }}</p> @enderror
                         </label>
 
                         <label class="block text-sm font-medium text-slate-700">
                             Batas Lamaran (Deadline)
-                            <input type="date" name="deadline" value="{{ old('deadline') }}" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                            <input type="date" name="deadline" value="{{ old('deadline') }}" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">
                             @error('deadline') <p class="mt-1 text-xs text-rose-500">{{ $message }}</p> @enderror
                         </label>
 
                         <label class="block text-sm font-medium text-slate-700">
                             Status <span class="text-rose-500">*</span>
-                            <select name="status" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500">
+                            <select name="status" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500">
                                 <option value="Aktif" {{ old('status') == 'Aktif' ? 'selected' : '' }}>Aktif</option>
                                 <option value="Draft" {{ old('status', 'Draft') == 'Draft' ? 'selected' : '' }}>Draft</option>
                                 <option value="Tutup" {{ old('status') == 'Tutup' ? 'selected' : '' }}>Tutup</option>
@@ -65,26 +65,26 @@
 
                     <label class="block text-sm font-medium text-slate-700">
                         Deskripsi Pekerjaan <span class="text-rose-500">*</span>
-                        <textarea name="description" rows="4" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="Tuliskan gambaran umum pekerjaan...">{{ old('description') }}</textarea>
+                        <textarea name="description" rows="4" required class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" placeholder="Tuliskan gambaran umum pekerjaan...">{{ old('description') }}</textarea>
                         @error('description') <p class="mt-1 text-xs text-rose-500">{{ $message }}</p> @enderror
                     </label>
 
                     <label class="block text-sm font-medium text-slate-700">
                         Persyaratan (Requirements)
-                        <textarea name="requirements" rows="4" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="Tuliskan kualifikasi yang dibutuhkan...">{{ old('requirements') }}</textarea>
+                        <textarea name="requirements" rows="4" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" placeholder="Tuliskan kualifikasi yang dibutuhkan...">{{ old('requirements') }}</textarea>
                         @error('requirements') <p class="mt-1 text-xs text-rose-500">{{ $message }}</p> @enderror
                     </label>
 
                     <label class="block text-sm font-medium text-slate-700">
                         Tanggung Jawab (Responsibilities)
-                        <textarea name="responsibilities" rows="4" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" placeholder="Tuliskan apa saja yang akan dikerjakan...">{{ old('responsibilities') }}</textarea>
+                        <textarea name="responsibilities" rows="4" class="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" placeholder="Tuliskan apa saja yang akan dikerjakan...">{{ old('responsibilities') }}</textarea>
                         @error('responsibilities') <p class="mt-1 text-xs text-rose-500">{{ $message }}</p> @enderror
                     </label>
                 </div>
 
                 <div class="flex items-center justify-end gap-3 border-t border-slate-100 pt-6">
                     <a href="{{ route('company.dashboard') }}" class="rounded-xl px-5 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-50 transition">Batal</a>
-                    <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-indigo-900 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-800">
+                    <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-emerald-900 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800">
                         Posting Lowongan
                     </button>
                 </div>
