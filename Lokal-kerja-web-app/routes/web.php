@@ -42,9 +42,17 @@ Route::middleware(['auth', 'role:job_seeker'])
         Route::post('/profile/skill', [ProfileController::class, 'storeSkill'])->name('profile.skill.store');
         Route::delete('/profile/skill/{index}', [ProfileController::class, 'destroySkill'])->name('profile.skill.destroy');
 
-        Route::post('/profile/generate-cv', [ProfileController::class, 'generateCv'])->name('profile.generate_cv');
-        Route::get('/profile/download-cv-pdf', [ProfileController::class, 'downloadCvPdf'])->name('profile.download_cv_pdf');
+       // Jika URL /profile/generate-cv dibuka langsung di browser, arahkan kembali ke profil
+        Route::get('/profile/generate-cv', function () {
+            return redirect()->route('jobs.profile');
+        });
 
+        // Generate CV harus pakai POST dari tombol/form
+        Route::post('/profile/generate-cv', [ProfileController::class, 'generateCv'])
+            ->name('profile.generate_cv');
+
+        Route::get('/profile/download-cv-pdf', [ProfileController::class, 'downloadCvPdf'])
+            ->name('profile.download_cv_pdf');
     });
 
 Route::middleware(['auth', 'role:company'])
