@@ -15,7 +15,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 w-full mx-auto flex items-center justify-between bg-white shadow-sm py-4 px-4 sm:px-8 md:px-45 font-semibold">
             <h2 class="text-2xl font-bold text-primary">LokalKerja <span class="text-sm font-normal text-slate-500">Perusahaan</span></h2>
             <ul class="flex items-center gap-4">
-                <a href="{{ route('company.dashboard') }}" class="text-gray-800 hover:text-gray-900 px-4 py-2 rounded-md">Dashboard</a>
+                <a href="{{ route('company.dashboard') }}" class="text-gray-800 hover:text-emerald-900 px-4 py-2 rounded-md">Dashboard</a>
             </ul>
     </nav>
 

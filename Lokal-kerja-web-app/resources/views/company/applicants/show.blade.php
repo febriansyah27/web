@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div class="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
             <div>
-                <a href="{{ route('company.applicants.index', $application->job_posting_id) }}" class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-indigo-600 transition">
+                <a href="{{ route('company.applicants.index', $application->job_posting_id) }}" class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-emerald-800 transition">
                     <x-lucide-arrow-left class="h-4 w-4" /> Kembali ke Daftar Pelamar
                 </a>
                 <h1 class="text-2xl font-bold text-slate-900">Detail Pelamar</h1>
@@ -12,7 +12,7 @@
             <form action="{{ route('company.applicants.updateStatus', $application->id) }}" method="POST" class="flex items-center gap-3">
                 @csrf
                 @method('PATCH')
-                <select name="status" class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 shadow-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" onchange="this.form.submit()">
+                <select name="status" class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 shadow-sm outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500" onchange="this.form.submit()">
                     <option value="Pending" {{ $application->status == 'Pending' ? 'selected' : '' }}>Pending</option>
                     <option value="Reviewed" {{ $application->status == 'Reviewed' ? 'selected' : '' }}>Direview</option>
                     <option value="Accepted" {{ $application->status == 'Accepted' ? 'selected' : '' }}>Diterima</option>
@@ -33,7 +33,7 @@
             <div class="md:col-span-1 space-y-6">
                 <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div class="flex flex-col items-center text-center">
-                        <div class="flex h-20 w-20 items-center justify-center rounded-full bg-indigo-100 text-3xl font-bold text-indigo-700">
+                        <div class="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100 text-3xl font-bold text-emerald-700">
                             {{ substr($user->name, 0, 1) }}
                         </div>
                         <h2 class="mt-4 text-lg font-bold text-slate-900">{{ $user->name }}</h2>
@@ -68,7 +68,7 @@
                     @if($profile && is_array($profile->skills) && count($profile->skills) > 0)
                         <div class="flex flex-wrap gap-2">
                             @foreach($profile->skills as $skill)
-                                <span class="rounded-lg bg-indigo-50 border border-indigo-100 px-3 py-1 text-xs font-semibold text-indigo-700">
+                                <span class="rounded-lg bg-emerald-50 border border-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">
                                     {{ $skill['name'] ?? $skill }}
                                 </span>
                             @endforeach
@@ -82,15 +82,15 @@
                 @if($application->cv_path)
                 <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <h3 class="mb-4 text-base font-bold text-slate-900">Dokumen Lampiran</h3>
-                    <div class="flex items-center justify-between rounded-xl border border-indigo-100 bg-indigo-50 p-4">
+                    <div class="flex items-center justify-between rounded-xl border border-emerald-100 bg-emerald-50 p-4">
                         <div class="flex items-center gap-3">
-                            <x-lucide-file-text class="h-6 w-6 text-indigo-600" />
+                            <x-lucide-file-text class="h-6 w-6 text-emerald-600" />
                             <div>
                                 <p class="text-sm font-semibold text-slate-900">CV / Resume (PDF)</p>
                                 <p class="text-xs text-slate-500">Dilampirkan pelamar</p>
                             </div>
                         </div>
-                        <a href="{{ route('company.cv.download', $application->id) }}" class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-indigo-600 shadow-sm transition hover:bg-indigo-600 hover:text-white border border-indigo-200">
+                        <a href="{{ route('company.cv.download', $application->id) }}" class="flex h-10 w-10 items-center justify-center rounded-full bg-white text-emerald-600 shadow-sm transition hover:bg-emerald-600 hover:text-white border border-emerald-200">
                             <x-lucide-download class="h-4 w-4" />
                         </a>
                     </div>
@@ -116,8 +116,8 @@
                     @if($profile && is_array($profile->experience) && count($profile->experience) > 0)
                         <div class="space-y-6">
                             @foreach($profile->experience as $exp)
-                                <div class="relative pl-6 border-l-2 border-indigo-100">
-                                    <div class="absolute -left-1.5 top-1.5 h-3 w-3 rounded-full bg-indigo-500 border-2 border-white"></div>
+                                <div class="relative pl-6 border-l-2 border-emerald-100">
+                                    <div class="absolute -left-1.5 top-1.5 h-3 w-3 rounded-full bg-emerald-500 border-2 border-white"></div>
                                     <h4 class="font-semibold text-slate-900">{{ $exp['title'] ?? 'Posisi' }}</h4>
                                     <div class="text-sm font-medium text-slate-600 mt-0.5">{{ $exp['company'] ?? 'Perusahaan' }}</div>
                                     <div class="text-xs text-slate-500 mt-1">

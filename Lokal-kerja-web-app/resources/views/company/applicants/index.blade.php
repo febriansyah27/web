@@ -1,7 +1,7 @@
 <x-company-layout title="Daftar Pelamar">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="mb-8">
-            <a href="{{ route('company.dashboard') }}" class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-indigo-600 transition">
+            <a href="{{ route('company.dashboard') }}" class="mb-4 inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-emerald-800 transition">
                 <x-lucide-arrow-left class="h-4 w-4" /> Kembali ke Dashboard
             </a>
             <h1 class="text-2xl font-bold text-slate-900">Pelamar: {{ $job->title }}</h1>
@@ -24,7 +24,7 @@
                             <tr class="hover:bg-slate-50 transition-colors">
                                 <td class="px-6 py-4">
                                     <div class="flex items-center gap-4">
-                                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-indigo-700 font-bold">
+                                        <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-700 font-bold">
                                             {{ substr($app->user->name, 0, 1) }}
                                         </div>
                                         <div>
@@ -48,7 +48,7 @@
                                     @endif
                                 </td>
                                 <td class="px-6 py-4 text-right">
-                                    <a href="{{ route('company.applicants.show', $app->id) }}" class="inline-flex items-center gap-2 rounded-lg bg-indigo-50 px-4 py-2 text-xs font-semibold text-indigo-700 transition hover:bg-indigo-100 border border-indigo-200">
+                                    <a href="{{ route('company.applicants.show', $app->id) }}" class="inline-flex items-center gap-2 rounded-lg bg-emerald-50 px-4 py-2 text-xs font-semibold text-emerald-700 transition hover:bg-emerald-100 border border-emerald-200">
                                         Lihat Profil
                                     </a>
                                 </td>

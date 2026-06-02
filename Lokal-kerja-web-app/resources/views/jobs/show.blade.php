@@ -77,7 +77,7 @@
                 <!-- Deskripsi Pekerjaan -->
                 <div class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
                     <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
-                        <x-lucide-file-text class="h-5 w-5 text-indigo-600" /> Deskripsi Pekerjaan
+                        <x-lucide-file-text class="h-5 w-5 text-primary" /> Deskripsi Pekerjaan
                     </h2>
                     <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed whitespace-pre-line">
                         {{ $job->description }}
@@ -91,7 +91,7 @@
                 <!-- Persyaratan -->
                 <div class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
                     <h2 class="text-xl font-bold text-slate-900 mb-2 flex items-center gap-2">
-                        <x-lucide-award class="h-5 w-5 text-indigo-600" /> Persyaratan
+                        <x-lucide-award class="h-5 w-5 text-primary" /> Persyaratan
                     </h2>
                     <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed whitespace-pre-line">
                         {{ $job->requirements }}
@@ -147,7 +147,7 @@
                         <div class="mb-4 text-sm text-slate-600 text-center">
                             Pastikan profil dan resume Anda sudah lengkap sebelum melamar posisi ini.
                         </div>
-                        <button onclick="window.location.href='{{ route('jobs.apply.create', $job->id) }}'" class="w-full rounded-xl bg-indigo-600 px-4 py-3.5 text-center text-sm font-bold text-white transition hover:bg-indigo-700 active:bg-indigo-800 shadow-md hover:shadow-lg">
+                        <button onclick="window.location.href='{{ route('jobs.apply.create', $job->id) }}'" class="w-full rounded-xl bg-primary px-4 py-3.5 text-center text-sm font-bold text-white transition hover:bg-emerald-700 active:bg-emerald-800 shadow-md hover:shadow-lg">
                             Ajukan Lamaran
                         </button>
                     @endif

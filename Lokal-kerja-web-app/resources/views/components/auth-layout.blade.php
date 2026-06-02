@@ -15,7 +15,7 @@
     <nav class="mx-auto flex items-center justify-between bg-white shadow-sm py-4 px-45 font-semibold">
             <h2 class="text-2xl font-bold text-primary">LokalKerja</h2>
             <ul class="flex items-center gap-4">
-                <a href="#" class="text-gray-800 hover:text-gray-900 px-4 py-2 rounded-md">Cari Lowongan</a>
+                <a href="#" class="text-gray-800 hover:text-emerald-900 px-4 py-2 rounded-md">Cari Lowongan</a>
                 <a
                     href="{{ route('auth.login') }}"
                     class="text-white bg-primary  px-4 py-2 rounded-md transition-all">
